@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&display=swap");
+
+:root {
+  --ff: "Poppins", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+}
+* {
+  font-family: var(--ff);
+}
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+header,
+.introduction article,
+.aboutOurService,
+.coffeeQuotes,
+.contactUs {
+  min-height: 810px;
+  scroll-snap-align: start;
+}
+header {
+  background-image: url("../img/BannerLandscape.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+}
+.banner .content {
+  padding: 10px 10px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+.banner .content h1 {
+  font-size: clamp(19px, 6vw, 80px);
+  font-weight: var(--fw-black);
+  letter-spacing: clamp(0.8rem, 2vw, 1.5rem);
+  color: #fff;
+}
+.banner .content h2 {
+  font-size: clamp(19px, 4vw, 40px);
+  font-weight: var(--fw-semibold);
+  color: #fff;
+}
+@media (max-width: 424px) {
+  .banner .content h1,
+  h2 {
+    text-align: center;
+  }
+}
+.banner button {
+  margin-top: 10px;
+  padding: 15px 20px;
+  border-radius: 40px;
+  font-weight: var(--fw-extrabold);
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: orangered;
+  cursor: pointer;
+}
+main .introduction {
+  background-color: #f9e8d9;
+}
+main .introduction article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .introduction article h2 {
+  font-size: clamp(30px, 4vw, 60px);
+  font-weight: var(--fw-semibold);
+  color: #000;
+}
+main .introduction article p {
+  font-size: clamp(12px, 2vw+2px, 30px);
+  font-weight: var(--fw-medium);
+  color: #000;
+}
+main .introduction article img {
+  width: clamp(500px, 50vw, 600px);
+}
+@media (max-width: 1300px) {
+  main .introduction article {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .introduction article p {
+    font-size: 16px;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+main .aboutOurService {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9e8d9;
+}
+main .aboutOurService article {
+  display: flex;
+  flex-direction: column;
+}
+main .aboutOurService .content h2 {
+  font-size: clamp(30px, 7vw, 60px);
+  font-weight: var(--fw-semibold);
+  color: #000;
+}
+main .aboutOurService .content p {
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: var(--fw-medium);
+  color: #000;
+}
+main .aboutOurService article .aboutImage {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+main .aboutOurService article .aboutImage p {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #000;
+}
+main .aboutOurService .one {
+  width: clamp(400px, 35vw, 500px);
+}
+main .aboutOurService .two {
+  width: clamp(400px, 35vw, 500px);
+}
+main .aboutOurService .three {
+  width: clamp(400px, 35vw, 500px);
+  height: 333px;
+}
+@media (max-width: 1300px) {
+  main .aboutOurService .content {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .aboutOurService article .aboutImage {
+    flex-direction: column;
+  }
+  main .aboutOurService .content p {
+    margin-top: 30px;
+  }
+  main .one {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .two {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .three {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+main .coffeeQuotes {
+  background-image: url("../img/latteArt2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .coffeeQuotes article {
+  opacity: 0.9;
+  backdrop-filter: blur(10px);
+  width: 90%;
+}
+main .coffeeQuotes article p {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: var(--fw-black);
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px;
+}
+main .contactUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/breakFast.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+main .contactUs article {
+  width: clamp(310px, 35vw, 500px);
+  min-height: 400px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+}
+
+main .contactUs article h2 {
+  font-size: clamp(30px, 3vw, 50px);
+  font-weight: var(--fw-extrabold);
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .contactUs article p {
+  font-size: clamp(18px, 2vw, 27px);
+  font-weight: var(--fw-semibold);
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+}
